@@ -181,6 +181,38 @@ void sensirion_i2c_hal_sleep_usec(uint32_t useconds) {
 }
 ```
 
+## Modify MeasurementUnit attributes for the Air Quality Clusters
+
+The MeasurementUnit attributes for the Air QUality clusters need to be modified to match the Sensirion SEN66 reported values.
+
+Open "air-quality-sensor-manager.h" found in your include directory and find these code lines:
+
+```
+        mPm1ConcentrationMeasurementInstance(mEndpointId, Pm1ConcentrationMeasurement::Id,
+                                             ConcentrationMeasurement::MeasurementMediumEnum::kAir,
+                                             ConcentrationMeasurement::MeasurementUnitEnum::kPpm),
+        mPm10ConcentrationMeasurementInstance(mEndpointId, Pm10ConcentrationMeasurement::Id,
+                                              ConcentrationMeasurement::MeasurementMediumEnum::kAir,
+                                              ConcentrationMeasurement::MeasurementUnitEnum::kPpm),
+        mPm25ConcentrationMeasurementInstance(mEndpointId, Pm25ConcentrationMeasurement::Id,
+                                              ConcentrationMeasurement::MeasurementMediumEnum::kAir,
+                                              ConcentrationMeasurement::MeasurementUnitEnum::kPpm),
+```
+
+Change the MeasurementUnit from kPpm ( Parts per Million) to kUgm3 ( Microgram per m3):
+
+```
+        mPm1ConcentrationMeasurementInstance(mEndpointId, Pm1ConcentrationMeasurement::Id,
+                                             ConcentrationMeasurement::MeasurementMediumEnum::kAir,
+                                             ConcentrationMeasurement::MeasurementUnitEnum::kUgm3),
+        mPm10ConcentrationMeasurementInstance(mEndpointId, Pm10ConcentrationMeasurement::Id,
+                                              ConcentrationMeasurement::MeasurementMediumEnum::kAir,
+                                              ConcentrationMeasurement::MeasurementUnitEnum::kUgm3),
+        mPm25ConcentrationMeasurementInstance(mEndpointId, Pm25ConcentrationMeasurement::Id,
+                                              ConcentrationMeasurement::MeasurementMediumEnum::kAir,
+                                              ConcentrationMeasurement::MeasurementUnitEnum::kUgm3),
+```
+
 
 
 
