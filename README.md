@@ -30,6 +30,16 @@ Start by creating a new project in Simplicity Studio V5 by selecting the "Matter
 
 This is a good starting point as it already implements a fully functional Matter over Thread device.
 
+Note! Due to a bug in the sample project we need to disable two clusters from the .zap file.
+
+Open the config/common/air-quality-sensor-app.zap in the ZAP editor.
+
+Select Endpoint #0 and enter "diag" in the Search Clusters input box.
+
+Disable the Wi-Fi Network Diagnostics cluster and the Ethernet Network Diagnostics cluster by clearing the Server checkboxes.
+
+![Disable Network Diagnostics Clusters](./images/disable-clusters.png)
+
 Build the solution to make sure it builds with no errors.
 
 ## Add the I2C drivers to your project
