@@ -52,13 +52,13 @@ Search for the I2CSPM component as shown below and install it:
 
 Enter "sen66" as the instance name.
 
+![Select instance name](./images/select-i2cspm-instance-name.png)
+
 Important! Depending on which connectors we use for the I2C bus, the instance needs to be configured accordingly. If the PB04 and PB05 headers found on the J1 connector is used for SDA and SLC, the instance should be configured as shown below:
 
 ![I2CSPM Instance Configuration](./images/i2cspm-instance-configuration.png)
 
-Selecting "mikroe" as the instance name will map the J1 headers PB04 and PB05 found on the J1 breakout pad to the I2CSPM as shown in the figure above. If you connect the sensor to the Qwiic connector, select "qwiic" as the instance name as this will map 
-
-![Select instance name](./images/select-i2cspm-instance-name.png)
+Selecting "mikroe" as the instance name will map the J1 headers PB04 and PB05 found on the J1 breakout pad to the I2CSPM as shown in the figure above. If you connect the sensor to the Qwiic connector, select "qwiic" as the instance name as this will map it correctly for the Qwiic connector.
 
 ## Add support for USTIMER to your project
 
