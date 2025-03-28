@@ -22,6 +22,17 @@ The recommended voltage is 3.3V.
 
 ![EFR32xG24 Explorer Kit Connectors](./images/xg24-ek2703a-connectors.png)
 
+## Connecting the SEN66 sensor
+
+- Connecting the SEN66 air quality sensor
+
+| EFR32xG24 Explorer Kit Pin | SEN66 Pin |
+|----------------------------|-----------|
+| GND                        | GND       |
+| VMCU                       | VDD       |
+| PB05                       | SDA       |
+| PB04                       | SCL       |
+
 ## Create a new project based on the "Matter - SoC Sensor over Thread with external Bootloader" Solution Example
 
 Start by creating a new project in Simplicity Studio V5 by selecting the "Matter - SoC Air Quality Sensor with internal Bootloader Solution" example solution project and click "Create":
